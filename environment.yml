@@ -21,4 +21,8 @@ dependencies:
   - wheel=0.45.1
   - xz=5.6.4
   - zlib=1.2.13
-prefix: /opt/anaconda3/envs/codemonkey-env
+  - pip:
+      - fastapi
+      - uvicorn
+      - faiss-cpu
+      - sentence-transformers
