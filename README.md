@@ -24,21 +24,32 @@ requirements.txt      # Python dependencies
 .env                  # Environment variables
 ```
 
-## Running Locally
+## Environment Setup
 
-1. Install dependencies:
+1. Create the conda environment:
+   ```bash
+   conda env create -f environment.yml
+   ```
+2. Activate it:
+   ```bash
+   conda activate SMEAI-env
+   ```
+3. (Optional) Install or update Python packages:
    ```bash
    pip install -r requirements.txt
    ```
-2. Build the document index (placeholder command):
+
+## Running Locally
+
+1. Build the document index (placeholder command):
    ```bash
    python backend/ingest/build_index.py
    ```
-3. Start the API server:
+2. Start the API server:
    ```bash
    uvicorn backend.api.server:app --reload
    ```
-4. Send a request:
+3. Send a request:
    ```bash
    curl -X POST "http://localhost:8000/query" -d 'token=abc123token&query=hello'
    ```
