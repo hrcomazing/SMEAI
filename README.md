@@ -1,17 +1,47 @@
-# SMEAI
+# SMEAI Chatbot Skeleton
 
-## Overview
-SMEAI is a Python project that demonstrates basic functionality with a simple `main.py` script.
+This repository contains a starter layout for an authenticated retrieval augmented
+chatbot powered by a local Mixtral LLM. The code is organised in modular
+components under the `backend/` directory.
 
-## Files
-- `main.py`: Contains the main function that prints "Hello, World!" to the console.
+## Directory Structure
 
-## How to Run
-1. Ensure you have Python installed on your system.
-2. Run the following command in the terminal:
+```
+backend/
+    ingest/            # Build FAISS index from raw documents
+    retrieval/         # Query handling and vector search
+    llm/               # Mixtral client wrapper
+    api/               # FastAPI application
+    auth/              # Token to user mapping
+    config.py          # Shared configuration values
+
+data/                 # Persisted FAISS index and metadata
+Dockerfile            # Container setup
+requirements.txt      # Python dependencies
+.env                  # Environment variables
+```
+
+## Running Locally
+
+1. Install dependencies:
    ```bash
-   python main.py
+   pip install -r requirements.txt
+   ```
+2. Build the document index (placeholder command):
+   ```bash
+   python backend/ingest/build_index.py
+   ```
+3. Start the API server:
+   ```bash
+   uvicorn backend.api.server:app --reload
+   ```
+4. Send a request:
+   ```bash
+   curl -X POST "http://localhost:8000/query" -d 'token=abc123token&query=hello'
    ```
 
-## License
-This project is licensed under the MIT License.
+## Status
+
+This project provides only pseudocode placeholders for the ingestion pipeline,
+vector search, and LLM interaction. It is intended as a starting point for a
+full-scale application.
