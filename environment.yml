@@ -1,4 +1,4 @@
-name: codemonkey-env
+name: SMEAI-env
 channels:
   - defaults
   - https://repo.anaconda.com/pkgs/main
