@@ -1,7 +1,7 @@
-# CodeMonkey
+# SMEAI
 
 ## Overview
-CodeMonkey is a Python project that demonstrates basic functionality with a simple `main.py` script.
+SMEAI is a Python project that demonstrates basic functionality with a simple `main.py` script.
 
 ## Files
 - `main.py`: Contains the main function that prints "Hello, World!" to the console.
