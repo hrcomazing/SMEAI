@@ -3,6 +3,7 @@
 This repository contains a starter layout for an authenticated retrieval augmented
 chatbot powered by a local Mixtral LLM. The code is organised in modular
 components under the `backend/` directory.
+User-interface code is placed under the new `frontend/` directory.
 
 ## Directory Structure
 
@@ -14,6 +15,8 @@ backend/
     api/               # FastAPI application
     auth/              # Token to user mapping
     config.py          # Shared configuration values
+
+frontend/             # Web user interface
 
 data/                 # Persisted FAISS index and metadata
 Dockerfile            # Container setup
