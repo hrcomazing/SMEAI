@@ -2,3 +2,5 @@ fastapi
 uvicorn
 faiss-cpu
 sentence-transformers
+jira
+requests
